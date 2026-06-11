@@ -94,12 +94,28 @@ app/src/main/java/com/example/iptvplayer/
 
 ## Scope & next steps
 
-This starter implements the full **Live TV** vertical slice: login → category
-rows → channel grid → playback. Natural extensions:
+The app implements three full content sections, reachable from the top-level
+TV browse screen:
 
-- **VOD & Series** — the Xtream API exposes `get_vod_categories`,
-  `get_vod_streams`, `get_series`, etc. Add them to `XtreamApi` and new browse rows.
+- **Live TV** — login → category rows → channel grid → playback.
+- **Movies (VOD)** — category rows → movie posters → playback.
+- **Series** — category rows → series posters → a detail screen with one row
+  per season → episode playback.
+
+Natural extensions:
+
 - **EPG** (now/next program info) via `get_short_epg`.
+- **Series/movie detail metadata** (plot, cast, year) via `get_vod_info` /
+  the `info` block of `get_series_info`.
 - **Search & favorites.**
 - **Encrypted credential storage** (`androidx.security:security-crypto`).
 - **Real launcher icons** as PNG mipmaps for best results across devices.
+
+### How the browse screen is wired
+
+`MainFragment` (a `BrowseSupportFragment`) defines three `PageRow`s. When a
+section is focused, `PageRowFragmentFactory` supplies the matching
+`CatalogFragment`, which loads that content type's categories + items and lays
+them out as rows. Tapping a series opens `SeriesDetailActivity`
+(`SeriesDetailFragment`), which fetches `get_series_info` and renders a row per
+season. Everything ultimately routes into the same `PlaybackActivity`.
