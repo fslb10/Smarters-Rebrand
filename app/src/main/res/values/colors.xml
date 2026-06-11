@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ── BRANDING: your palette. Change these to re-theme the whole app. ── -->
+    <color name="brand_primary">#3DDC84</color>
+    <color name="brand_primary_dark">#1E2A20</color>
+    <color name="brand_on_primary">#0E1726</color>
+
+    <color name="brand_background">#0E1726</color>
+    <color name="brand_on_background">#FFFFFF</color>
+    <color name="brand_muted">#9AA5B1</color>
+    <color name="brand_error">#FF6B6B</color>
+</resources>

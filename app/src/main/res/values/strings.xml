@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ── BRANDING: change this to your app's name ── -->
+    <string name="app_name">IPTV Player</string>
+
+    <!-- Login screen -->
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="action_login">Sign in</string>
+    <string name="connected_to">Connected to %1$s</string>
+
+    <!-- Errors / status -->
+    <string name="error_empty_fields">Please enter your username and password.</string>
+    <string name="error_invalid_credentials">Invalid username or password.</string>
+    <string name="error_account_status">Account is not active (status: %1$s).</string>
+    <string name="error_network">Network error: %1$s</string>
+    <string name="error_no_channels">No channels found for this account.</string>
+    <string name="error_playback">Playback error: %1$s</string>
+</resources>

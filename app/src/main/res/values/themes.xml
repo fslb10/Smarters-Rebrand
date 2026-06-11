@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Browse (TV) theme. -->
+    <style name="AppTheme" parent="Theme.Leanback">
+        <item name="android:colorPrimary">@color/brand_primary</item>
+    </style>
+
+    <!-- Login theme (Material). -->
+    <style name="AppTheme.Login" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryVariant">@color/brand_primary_dark</item>
+        <item name="colorOnPrimary">@color/brand_on_primary</item>
+        <item name="android:windowBackground">@color/brand_background</item>
+        <item name="android:statusBarColor">@color/brand_background</item>
+    </style>
+
+    <!-- Fullscreen playback theme. -->
+    <style name="AppTheme.Player" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>

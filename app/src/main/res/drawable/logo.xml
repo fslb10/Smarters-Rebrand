@@ -1,0 +1,10 @@
+<!-- Login screen logo. BRANDING: replace with your own logo. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillColor="#3DDC84"
+        android:pathData="M60,8 A52,52 0 1,0 60,112 A52,52 0 1,0 60,8 Z M48,40 L48,80 L82,60 Z" />
+</vector>
