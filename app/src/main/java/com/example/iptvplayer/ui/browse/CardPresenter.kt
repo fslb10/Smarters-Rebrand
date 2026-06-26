@@ -33,7 +33,7 @@ class CardPresenter : Presenter() {
         return ViewHolder(cardView)
     }
 
-    override fun onBindViewHolder(viewHolder: ViewHolder, item: Any) {
+    override fun onBindViewHolder(viewHolder: ViewHolder, item: Any?) {
         val card = viewHolder.view as ImageCardView
         val meta = metaFor(item)
 
@@ -61,7 +61,7 @@ class CardPresenter : Presenter() {
         card.mainImage = null
     }
 
-    private fun metaFor(item: Any): CardMeta = when (item) {
+    private fun metaFor(item: Any?): CardMeta = when (item) {
         is LiveStream -> CardMeta(item.name, item.epgChannelId.orEmpty(), item.streamIcon, WIDE_W, WIDE_H)
         is VodStream -> CardMeta(item.name, item.rating.orEmpty(), item.streamIcon, POSTER_W, POSTER_H)
         is Series -> CardMeta(item.name, "", item.cover, POSTER_W, POSTER_H)
