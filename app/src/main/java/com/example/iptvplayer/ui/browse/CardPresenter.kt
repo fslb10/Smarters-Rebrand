@@ -43,13 +43,14 @@ class CardPresenter : Presenter() {
 
         val placeholder =
             ContextCompat.getDrawable(card.context, R.drawable.ic_channel_placeholder)
-        if (!meta.imageUrl.isNullOrBlank()) {
+        val imageView = card.mainImageView
+        if (!meta.imageUrl.isNullOrBlank() && imageView != null) {
             Glide.with(card.context)
                 .load(meta.imageUrl)
                 .centerInside()
                 .placeholder(placeholder)
                 .error(placeholder)
-                .into(card.mainImageView)
+                .into(imageView)
         } else {
             card.mainImage = placeholder
         }
