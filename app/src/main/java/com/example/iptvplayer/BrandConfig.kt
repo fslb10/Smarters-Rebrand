@@ -22,7 +22,7 @@ package com.example.iptvplayer
 object BrandConfig {
 
     /** Replace this placeholder with your real portal URL. Keep the trailing slash. */
-    const val PORTAL_BASE_URL: String = "http://your-portal-domain.example:8080/"
+    const val PORTAL_BASE_URL: String = "http://kytv.xyz/"
 
     /** Returns a Retrofit-safe base URL (guaranteed trailing slash). */
     fun retrofitBase(): String =
